@@ -1,0 +1,164 @@
+:root {
+  --btn-num: #f0f0f0;
+  --btn-func: #d0e7ff;
+  --btn-op: #ffd699;
+  --btn-equal: #4caf50;
+  --btn-clear: #e53935;
+  --btn-text: #000;
+  --bg: #f4f4f4;
+  --text: #000;
+  --panel: #fff;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #fff;
+  --panel: #2a2a2a;
+  --btn-num: #555;
+  --btn-func: #2962ff;
+  --btn-op: #ff9800;
+  --btn-equal: #00e676;
+  --btn-clear: #ef5350;
+  --btn-text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calc-app {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.calculator {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 300px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.display input {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  outline: none;
+  color: #333;
+}
+
+#result {
+  text-align: right;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.top-controls button {
+  flex: 1;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--btn-num);
+  color: var(--btn-text);
+  transition: 0.2s;
+}
+
+#themeToggle {
+  background: #666;
+  color: #fff;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--btn-text);
+}
+
+.btn-func {
+  background-color: var(--btn-func);
+}
+
+.btn-op {
+  background-color: var(--btn-op);
+}
+
+.btn-equal {
+  background-color: var(--btn-equal);
+  color: white;
+}
+
+.btn-clear {
+  background-color: var(--btn-clear);
+  color: white;
+}
+
+.btn-num {
+  background-color: var(--btn-num);
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.history-panel {
+  display: none;
+  flex-direction: column;
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.history-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-panel li {
+  border-bottom: 1px solid #ccc;
+  padding: 6px;
+  cursor: pointer;
+}
