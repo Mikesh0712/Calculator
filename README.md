@@ -1,4 +1,4 @@
-A modern calculator built using HTML, CSS, and JavaScript, which is designed to work smoothly on both desktop and mobile and has a clean layout styled like a real calculator app.
+A modern calculator 🔢 built using HTML, CSS, and JavaScript, which is designed to work smoothly on both desktop and mobile and has a clean layout styled like a real calculator app.
 
 ✨Key Features added:
 
