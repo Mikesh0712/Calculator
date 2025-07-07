@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="calc-app">
+    <div class="calculator">
+      <!-- Display -->
+      <div class="display">
+        <input type="text" id="expression" placeholder="0" />
+        <div id="result">= 0</div>
+      </div>
+
+      <!-- Controls Row 1 -->
+      <div class="top-controls">
+        <button onclick="calculate()" class="btn-equal">=</button>
+        <button id="toggleMode" onclick="toggleMode()" class="btn-func">DEG</button>
+        <button onclick="clearDisplay()" class="btn-clear">AC</button>
+        <button onclick="insertAns()" class="btn-func">Ans</button>
+      </div>
+
+      <!-- Controls Row 2 -->
+      <div class="top-controls">
+        <button onclick="toggleHistory()">📜 History</button>
+        <button onclick="clearHistory()">🧹 Clear</button>
+        <button onclick="toggleTheme()" id="themeToggle">🌙</button>
+      </div>
+
+      <!-- Buttons Grid -->
+      <div class="buttons">
+        <button class="btn-func" onclick="insert('(')">(</button>
+        <button class="btn-func" onclick="insert(')')">)</button>
+        <button class="btn-func" onclick="insert('sqrt(')">√</button>
+        <button class="btn-op" onclick="insert('/')">÷</button>
+
+        <button class="btn-func" onclick="insert('sin(')">sin</button>
+        <button class="btn-func" onclick="insert('cos(')">cos</button>
+        <button class="btn-func" onclick="insert('tan(')">tan</button>
+        <button class="btn-op" onclick="insert('*')">×</button>
+
+        <button class="btn-num" onclick="insert('7')">7</button>
+        <button class="btn-num" onclick="insert('8')">8</button>
+        <button class="btn-num" onclick="insert('9')">9</button>
+        <button class="btn-op" onclick="insert('-')">−</button>
+
+        <button class="btn-num" onclick="insert('4')">4</button>
+        <button class="btn-num" onclick="insert('5')">5</button>
+        <button class="btn-num" onclick="insert('6')">6</button>
+        <button class="btn-op" onclick="insert('+')">+</button>
+
+        <button class="btn-num" onclick="insert('1')">1</button>
+        <button class="btn-num" onclick="insert('2')">2</button>
+        <button class="btn-num" onclick="insert('3')">3</button>
+        <button class="btn-func" onclick="insert('^')">xʸ</button>
+
+        <button class="btn-num" onclick="insert('0')">0</button>
+        <button class="btn-num" onclick="insert('.')">.</button>
+        <button class="btn-func" onclick="insert('pi')">π</button>
+        <button class="btn-func" onclick="insert('!')">x!</button>
+      </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="history-panel" id="historyPanel">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
